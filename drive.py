@@ -5,8 +5,8 @@ from viam.robot.client import RobotClient
 from viam.rpc.dial import Credentials, DialOptions
 
 
-SECRET_FROM_VIAM_APP = 'dvk8u8rfyan00jehmpop0es5v66e620t417ofim49o7hoyct' # '' # todo: replace with secret in 'Security' tab on the Viam app
-ADDRESS_FROM_VIAM_APP = 'icy-feather-main.o7tr45zsem.viam.cloud' # '' # todo: replace with remote address in 'Control' tab on the Viam app
+SECRET_FROM_VIAM_APP = '' # todo: replace with secret in 'Security' tab on the Viam app
+ADDRESS_FROM_VIAM_APP = '' # todo: replace with remote address in 'Control' tab on the Viam app
 
 async def connect():
   creds = Credentials(
