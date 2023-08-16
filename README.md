@@ -13,8 +13,8 @@ Try out the [Python Viam SDK](https://python.viam.dev/) and use code to control 
 1. Similarly, copy the robot address within `RobotClient.at_address()` shown in the **Code sample** tab and paste it between the single quotes for `ADDRESS_FROM_VIAM_APP` in `drive.py`. Only copy the hostname, ending with `viam.cloud`.
 1. Return to the Terminal in your GitHub editor window, and run the Python code:
 
-```sh
-python drive.py
-```
+   ```sh
+   python drive.py
+   ```
 
 You should see the robot move in the controls tab of the Try Viam app!
