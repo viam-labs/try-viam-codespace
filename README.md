@@ -3,7 +3,7 @@ Try out the [Python Viam SDK](https://python.viam.dev/) and use code to control 
 
 ## Get Started
 
-1. Access this repo in a web browser at: https://github.com/hexbabe/viam-python.
+1. Access this repo in a web browser at: https://github.com/viam-labs/try-viam-codespace .
 1. Open a new [GitHub Codespace](https://github.com/features/codespaces) using this repo as a template by clicking the green **Use this template** button, and selecting **Open in a codespace**.
 1. In the **Terminal** pane at the bottom of the editor, run `pip install viam-sdk` to install the latest version of Viam's Python SDK.
 1. In a separate browser window, head to [Try Viam](https://app.viam.com/try), start a new session by clicking **Try Now**. If you haven’t already, you will need to [create a Viam account](https://docs.viam.com/manage/#create-account-and-log-in). Wait for configuration to complete, then click **Try My Rover** when ready.
