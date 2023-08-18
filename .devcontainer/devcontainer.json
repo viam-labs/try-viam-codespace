@@ -1,0 +1,8 @@
+{
+  "image": "mcr.microsoft.com/devcontainers/universal:2",
+  "features": {
+    "ghcr.io/akhildevelops/devcontainer-features/pip:0": {
+      "package-name": "viam-sdk"
+    }
+  }
+}
