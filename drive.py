@@ -5,20 +5,24 @@ from viam.robot.client import RobotClient
 from viam.rpc.dial import Credentials, DialOptions
 
 
-SECRET_FROM_VIAM_APP = '' # todo: replace with secret in 'Security' tab on the Viam app
-ADDRESS_FROM_VIAM_APP = '' # todo: replace with remote address in 'Control' tab on the Viam app
+SECRET = '' # make sure to place the secret value inside of the single quotes
+REMOTE_ADDRESS = '' # likewise for the remote address
 
+
+"""
+The connect function establishes a network connection between Codespace host and the robot.
+"""
 async def connect():
-  creds = Credentials(
-    type='robot-location-secret',
-    payload=SECRET_FROM_VIAM_APP)
-  opts = RobotClient.Options(refresh_interval=0,
-                    dial_options=DialOptions(credentials=creds))
-  return await RobotClient.at_address(ADDRESS_FROM_VIAM_APP,
-                                      opts)
+  creds = Credentials(type='robot-location-secret', payload=SECRET)
+  opts = RobotClient.Options(refresh_interval=0, dial_options=DialOptions(credentials=creds))
+  return await RobotClient.at_address(REMOTE_ADDRESS, opts)
 
-
-async def moveInSquare(base):
+            
+"""
+The move_in_square function contains the code that moves the robot, executing a sequence
+of spin and move_straight commands that drives the robot in a square.
+"""
+async def move_in_square(base):
   for _ in range(4):
     # moves the rover forward 500mm at 500mm/s
     await base.move_straight(velocity=500, distance=500)
@@ -28,10 +32,14 @@ async def moveInSquare(base):
     print("spin 90 degrees")
 
 
+"""
+The main function is the one called upon script execution. It sets up and calls the
+two other functions.
+"""
 async def main():
   robot = await connect()
   base = Base.from_robot(robot, 'viam_base')
-  await moveInSquare(base)
+  await move_in_square(base)
 
   # Don't forget to close the robot when you're done!
   await robot.close()
